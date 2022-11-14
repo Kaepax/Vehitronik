@@ -54,6 +54,8 @@
           <div class="col-lg-8">
             <div class="card-group d-block d-md-flex row">
               <div class="card col-md-7 p-4 mb-0">
+                <form action="php/check-login.php"
+                      method="post">
                 <div class="card-body">
                   <h1>Login</h1>
                   <p class="text-medium-emphasis">Sign In to your account</p>
@@ -61,20 +63,32 @@
                       <svg class="icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
                       </svg></span>
-                    <input class="form-control" id="usrname" type="text" placeholder="Username" required>
+                    <input class="form-control" id="username" name="username" type="text" placeholder="Username" required>
                   </div>
                   <div class="input-group mb-4"><span class="input-group-text">
                       <svg class="icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
                       </svg></span>
-                    <input class="form-control" id="psw" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password"required>
+                    <input class="form-control" id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password"required>
+                  </div>
+                  <div class="mb-0">
+                    <label class="form-label">Select User Type:</label>
+                  </div>
+                  <div>
+                    <select class="form-select mb-3"
+                            name="role"
+                            aria-label="Default select example">
+                      <option selected value="user">User</option>
+                      <option value="admin">Admin</option>
+                    </select>
                   </div>
                   <div class="row">
                     <div class="col-6">
-                      <button class="btn btn-primary px-4" type="button" onclick="myFunction()">Login</button>
+                      <button class="btn btn-primary px-4" type="submit">Login</button>
                     </div>
                   </div>
                 </div>
+                </form>
               </div>
               <div class="card col-md-5 text-white bg-primary py-5">
                 <div class="card-body text-center">
@@ -94,19 +108,19 @@
     <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
     <script src="vendors/simplebar/js/simplebar.min.js"></script>
     <script>
-      function myFunction(){
-        var user = document.getElementById("usrname").value;
-        var pass = document.getElementById("psw").value;
-
-        if(user == "admin" && pass == "admin"){
-          window.location.href="index.php"
-        }else if(user == "user" && pass == "user") {
-          window.location.href = "index_user.php"
-        }
-          else{
-          alert("Incorrect username or password");
-        }
-      }
+      // function myFunction(){
+      //   var user = document.getElementById("usrname").value;
+      //   var pass = document.getElementById("psw").value;
+      //
+      //   if(user == "admin" && pass == "admin"){
+      //     window.location.href="index.php"
+      //   }else if(user == "user" && pass == "user") {
+      //     window.location.href = "index_user.php"
+      //   }
+      //     else{
+      //     alert("Incorrect username or password");
+      //   }
+      // }
     </script>
   </body>
 </html>
