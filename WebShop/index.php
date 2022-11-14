@@ -87,6 +87,7 @@ if(isset($_POST['add'])) {
     <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
 </head>
 <body>
+<?php if ($_SESSION['role']=='admin') {?>
 <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
     <div class="sidebar-brand d-none d-md-flex">
         <h class="sidebar-brand-full" style="font-size:50px;">Vehitronik</h>
@@ -154,7 +155,7 @@ if(isset($_POST['add'])) {
                                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
                                 </svg> Settings</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="login.php">
+                            <a class="dropdown-item" href="logout.php">
                                 <svg class="icon me-2">
                                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
                                 </svg> Logout</a>
@@ -252,7 +253,6 @@ if(isset($_POST['add'])) {
             </div>
         </div>
     </div>
-
     <!-- CoreUI and necessary plugins-->
     <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
     <script src="vendors/simplebar/js/simplebar.min.js"></script>
@@ -261,7 +261,171 @@ if(isset($_POST['add'])) {
     <script src="vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
     <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
     <script src="js/main.js"></script>
-    <script>
-    </script>
+    <?php }elseif ($_SESSION['role']=='user') {?>
+    <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
+        <div class="sidebar-brand d-none d-md-flex">
+            <h class="sidebar-brand-full" style="font-size:50px;">Vehitronik</h>
+            <h class="sidebar-brand-narrow" style="font-size:20px;">VT</h>
+        </div>
+        <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+            <li class="nav-item">
+                <a class="nav-link" href="index_user.php">
+                    <svg class="nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home"></use>
+                    </svg> Home<span class="badge badge-sm bg-info ms-auto"></span></a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="500.html">
+                    <svg class="nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cart"></use>
+                    </svg> View shopping cart<span class="badge badge-sm bg-info ms-auto"></span></a></li>
+        </ul>
+        <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+    </div>
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+        <header class="header header-sticky mb-4">
+            <div class="container-fluid">
+                <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+                    <svg class="icon icon-lg">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+                    </svg>
+                </button><a class="header-brand d-md-none" href="#">
+                    <ul class="header-nav d-none d-md-flex">
+                        <li class="nav-item"><a class="nav-link" href="index_user.php">Products</a></li>
+                    </ul>
+                    <ul class="header-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="500.html">
+                                <svg class="icon icon-lg">
+                                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cart"></use>
+                                </svg><h id="cart">0</h></a></li>
+                    </ul>
+                    <ul class="header-nav ms-3">
+                        <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <div class="avatar avatar-md"><h>User&nbsp;</h><img class="avatar-img" src="assets/img/avatars/10.jpg" alt="user@email.com"></div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end pt-0">
+                                <div class="dropdown-header bg-light py-2">
+                                    <div class="fw-semibold">Account</div>
+                                </div>
+                                <a class="dropdown-item" href="#">
+                                    <svg class="icon me-2">
+                                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
+                                    </svg> Messages<span class="badge badge-sm bg-success ms-2"></span></a>
+                                <a class="dropdown-item" href="#">
+                                    <svg class="icon me-2">
+                                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
+                                    </svg> Payments<span class="badge badge-sm bg-secondary ms-2"></span></a>
+                                <div class="dropdown-header bg-light py-2">
+                                    <div class="fw-semibold">Settings</div>
+                                </div>
+                                <a class="dropdown-item" href="#">
+                                    <svg class="icon me-2">
+                                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                                    </svg> Profile</a><a class="dropdown-item" href="#">
+                                    <svg class="icon me-2">
+                                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
+                                    </svg> Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="login.php">
+                                    <svg class="icon me-2">
+                                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                                    </svg> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+            <div class="header-divider"></div>
+            <div class="container-fluid">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb my-0 ms-2">
+                        <li class="breadcrumb-item">
+                            <!-- if breadcrumb is single--><span>Home</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </header>
+        <div class="body flex-grow-1 px-3">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/scr/maluch.jpg" class="card-img-top" width="100" height="200" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Fiat</h5>
+                            <p class="card-text">Product description and price</p>
+                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/scr/skuter_wodny.jpeg" class="card-img-top" width="100" height="200" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Skuter wodny</h5>
+                            <p class="card-text">Product description and price</p>
+                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/scr/jaht.webp" class="card-img-top" width="100" height="200" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Jacht</h5>
+                            <p class="card-text">Product description and price</p>
+                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/scr/porsche.jpg" class="card-img-top" width="100" height="200" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Porsche</h5>
+                            <p class="card-text">Product description and price</p>
+                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/scr/hulajnoga.png" class="card-img-top" width="100" height="200" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Hulajnoga</h5>
+                            <p class="card-text">Product description and price</p>
+                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/scr/skuter.jpg" class="card-img-top" width="100" height="200" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Skuter</h5>
+                            <p class="card-text">Product description and price</p>
+                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/scr/quad.jpg" class="card-img-top" width="100" height="200" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Quad</h5>
+                            <p class="card-text">Product description and price</p>
+                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/scr/rower.jpg" class="card-img-top" width="100" height="200" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Rower górski</h5>
+                            <p class="card-text">Product description and price</p>
+                            <p><button class="btn btn-primary" id="cart">Add to cart</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="vendors/simplebar/js/simplebar.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="vendors/chart.js/js/chart.min.js"></script>
+    <script src="vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
+    <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
+<?php }else{
+    header("Location: login.php");
+} ?>
