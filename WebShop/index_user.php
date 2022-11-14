@@ -213,14 +213,7 @@
     <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
     <script src="js/main.js"></script>
     <script>
-        var number = document.getElementById("cart");
-        var count = 0;
 
-        number.onclick = function() {
-            count += 1;
-            number.innerHTML = count;
-        }
     </script>
-
 </body>
 </html>
