@@ -113,7 +113,7 @@
                                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
                                 </svg> Settings</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="login.html">
+                            <a class="dropdown-item" href="login.php">
                                 <svg class="icon me-2">
                                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
                                 </svg> Logout</a>

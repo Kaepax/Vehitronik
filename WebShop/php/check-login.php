@@ -1,4 +1,6 @@
 <?php
+session_start();
+include "../php/userdb.php";
 
 if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'])){
     function test_input($data) {
@@ -13,13 +15,33 @@ if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'
     $role = test_input($_POST['role']);
 
     if(empty($username)) {
-        header("Location: ../login.html?error=Username is required");
+        header("Location: ../loginn.php?error=Username is required");
     }elseif (empty($password)) {
-        header("Location: ../login.html?error=Password is required");
+        header("Location: ../loginn.php?error=Password is required");
     }else {
-        header("Location: ../index.php");
+        $password = md5($password);
+
+        $sql = "SELECT * FROM users where username='$username' AND password='$password'";
+
+        $result = mysqli_query($conn, $sql);
+
+        if(mysqli_num_rows($result)===1) {
+            $row = mysqli_fetch_assoc($result);
+            if ($row['password'] === $password && $row['role']==$role) {
+                $_SESSION['name'] = $row['name'];
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['role'] = $row['role'];
+                $_SESSION['username'] = $row['username'];
+
+                header("Location: ../index.php");
+            }else{
+                header("Location: ../login.php?error=Incorrect Username or password");
+            }
+        }else {
+            header("Location: ../login.php?error=Incorrect Username or password");
+        }
     }
 
 }else{
-    header("Location: ../login.html");
+    header("Location: ../login.php");
 }
