@@ -34,8 +34,10 @@ if (isset($_POST['remove'])) {
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>Cart</title>
-
     <!-- Vendors styles-->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/logo2.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/logo2.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/logo2.svg">
     <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
     <link rel="stylesheet" href="css/vendors/simplebar.css">
     <!-- Main styles for this application-->
