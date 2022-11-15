@@ -58,12 +58,12 @@ if(isset($_POST['add'])) {
     <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/logo2.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/logo2.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/logo2.svg">
     <link rel="manifest" href="assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="assets/icons/logo2.svg">
     <meta name="theme-color" content="#ffffff">
     <!-- Vendors styles-->
     <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
@@ -279,7 +279,7 @@ if(isset($_POST['add'])) {
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home"></use>
                     </svg> Home<span class="badge badge-sm bg-info ms-auto"></span></a></li>
             <li class="nav-item">
-                <a class="nav-link" href="500.html">
+                <a class="nav-link" href="cart.php">
                     <svg class="nav-icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cart"></use>
                     </svg> View shopping cart<span class="badge badge-sm bg-info ms-auto"></span></a></li>
@@ -298,10 +298,10 @@ if(isset($_POST['add'])) {
                         <li class="nav-item"><a class="nav-link" href="index.php">Products</a></li>
                     </ul>
                     <ul class="header-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="500.html">
+                        <li class="nav-item"><a class="nav-link" href="cart.php">
                                 <svg class="icon icon-lg">
                                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cart"></use>
-                                </svg><h id="cart">0</h></a></li>
+                                </svg></a></li>
                     </ul>
                     <ul class="header-nav ms-3">
                         <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -330,7 +330,7 @@ if(isset($_POST['add'])) {
                                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
                                     </svg> Settings</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.php">
+                                <a class="dropdown-item" href="logout.php">
                                     <svg class="icon me-2">
                                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
                                     </svg> Logout</a>
@@ -352,70 +352,13 @@ if(isset($_POST['add'])) {
         <div class="body flex-grow-1 px-3">
             <div class="container-lg">
                 <div class="row">
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/scr/maluch.jpg" class="card-img-top" width="100" height="200" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Fiat</h5>
-                            <p class="card-text">Product description and price</p>
-                            <a href="index.php" class="btn btn-primary">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/scr/skuter_wodny.jpeg" class="card-img-top" width="100" height="200" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Skuter wodny</h5>
-                            <p class="card-text">Product description and price</p>
-                            <a href="index.php" class="btn btn-primary">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/scr/jaht.webp" class="card-img-top" width="100" height="200" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Jacht</h5>
-                            <p class="card-text">Product description and price</p>
-                            <a href="index.php" class="btn btn-primary">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/scr/porsche.jpg" class="card-img-top" width="100" height="200" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Porsche</h5>
-                            <p class="card-text">Product description and price</p>
-                            <a href="index.php" class="btn btn-primary">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/scr/hulajnoga.png" class="card-img-top" width="100" height="200" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Hulajnoga</h5>
-                            <p class="card-text">Product description and price</p>
-                            <a href="index.php" class="btn btn-primary">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/scr/skuter.jpg" class="card-img-top" width="100" height="200" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Skuter</h5>
-                            <p class="card-text">Product description and price</p>
-                            <a href="index.php" class="btn btn-primary">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/scr/quad.jpg" class="card-img-top" width="100" height="200" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Quad</h5>
-                            <p class="card-text">Product description and price</p>
-                            <a href="index.php" class="btn btn-primary">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/scr/rower.jpg" class="card-img-top" width="100" height="200" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Rower górski</h5>
-                            <p class="card-text">Product description and price</p>
-                            <p><button class="btn btn-primary" id="cart">Add to cart</button></p>
+                    <div class="d-flex justify-content-around">
+                        <div style="flex-basis: 20rem">
+                    <?php
+                    $result=$database->getData();
+                    while($row=mysqli_fetch_assoc($result)) {
+                        component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
+                    }?>
                         </div>
                     </div>
                 </div>

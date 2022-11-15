@@ -15,9 +15,8 @@ if(isset($_REQUEST['username'])){
     $result = mysqli_query($con, $sql);
 
     if($result){
-        echo 'Success';
         header("Location: ../login.php");
     }else{
-        echo 'error';
+        echo "<script>alert('Cannot create account!')</script>";
     }
 }
