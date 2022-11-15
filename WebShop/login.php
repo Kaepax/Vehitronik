@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -70,7 +69,8 @@
                       <svg class="icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
                       </svg></span>
-                                    <input class="form-control" id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password"required>
+                                    <input class="form-control" id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                           placeholder="Password"required>
                                 </div>
                                 <div class="mb-0">
                                     <label class="form-label">Select User Type:</label>
@@ -108,20 +108,5 @@
 <!-- CoreUI and necessary plugins-->
 <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
 <script src="vendors/simplebar/js/simplebar.min.js"></script>
-<script>
-    // function myFunction(){
-    //   var user = document.getElementById("usrname").value;
-    //   var pass = document.getElementById("psw").value;
-    //
-    //   if(user == "admin" && pass == "admin"){
-    //     window.location.href="index.php"
-    //   }else if(user == "user" && pass == "user") {
-    //     window.location.href = "index_user.php"
-    //   }
-    //     else{
-    //     alert("Incorrect username or password");
-    //   }
-    // }
-</script>
 </body>
 </html>
