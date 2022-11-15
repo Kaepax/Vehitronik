@@ -10,15 +10,15 @@ class CreateDb
     public $con;
 
     public function __construct(
-        $dbname="Newdb",
-        $tablename="Productdb",
-        $servername="localhost",
-        $username="root",
-        $password=""
+        $dbname="sql7567131",
+        $tablename="producttb",
+        $servername="sql7.freesqldatabase.com",
+        $username="sql7567131",
+        $password="QWfMzWQq53"
     )
     {
         $this->dbname=$dbname;
-        $this->tablename=$tablename;
+        $this->tablename="producttb";
         $this->servername=$servername;
         $this->username=$username;
         $this->password=$password;
