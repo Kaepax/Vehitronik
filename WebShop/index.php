@@ -91,7 +91,12 @@ if(isset($_POST['add'])) {
 <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
     <div class="sidebar-brand d-none d-md-flex">
         <h class="sidebar-brand-full" style="font-size:50px;">Vehitronik</h>
-        <h class="sidebar-brand-narrow" style="font-size:20px;">VT</h>
+        <h class="sidebar-brand-narrow" style="font-size:1px;">
+            <svg class="nav-icon" style="width: 10rem">
+                <use xlink:href="assets/icons/logo2.svg"></use>
+            </svg>
+            VT
+        </h>
     </div>
     <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
         <li class="nav-item">
@@ -269,7 +274,7 @@ if(isset($_POST['add'])) {
         </div>
         <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
             <li class="nav-item">
-                <a class="nav-link" href="index_user.php">
+                <a class="nav-link" href="index.php">
                     <svg class="nav-icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-home"></use>
                     </svg> Home<span class="badge badge-sm bg-info ms-auto"></span></a></li>
@@ -290,7 +295,7 @@ if(isset($_POST['add'])) {
                     </svg>
                 </button><a class="header-brand d-md-none" href="#">
                     <ul class="header-nav d-none d-md-flex">
-                        <li class="nav-item"><a class="nav-link" href="index_user.php">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php">Products</a></li>
                     </ul>
                     <ul class="header-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="500.html">
@@ -352,7 +357,7 @@ if(isset($_POST['add'])) {
                         <div class="card-body">
                             <h5 class="card-title">Fiat</h5>
                             <p class="card-text">Product description and price</p>
-                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                            <a href="index.php" class="btn btn-primary">Add to cart</a>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -360,7 +365,7 @@ if(isset($_POST['add'])) {
                         <div class="card-body">
                             <h5 class="card-title">Skuter wodny</h5>
                             <p class="card-text">Product description and price</p>
-                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                            <a href="index.php" class="btn btn-primary">Add to cart</a>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -368,7 +373,7 @@ if(isset($_POST['add'])) {
                         <div class="card-body">
                             <h5 class="card-title">Jacht</h5>
                             <p class="card-text">Product description and price</p>
-                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                            <a href="index.php" class="btn btn-primary">Add to cart</a>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -376,7 +381,7 @@ if(isset($_POST['add'])) {
                         <div class="card-body">
                             <h5 class="card-title">Porsche</h5>
                             <p class="card-text">Product description and price</p>
-                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                            <a href="index.php" class="btn btn-primary">Add to cart</a>
                         </div>
                     </div>
                 </div>
@@ -386,7 +391,7 @@ if(isset($_POST['add'])) {
                         <div class="card-body">
                             <h5 class="card-title">Hulajnoga</h5>
                             <p class="card-text">Product description and price</p>
-                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                            <a href="index.php" class="btn btn-primary">Add to cart</a>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -394,7 +399,7 @@ if(isset($_POST['add'])) {
                         <div class="card-body">
                             <h5 class="card-title">Skuter</h5>
                             <p class="card-text">Product description and price</p>
-                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                            <a href="index.php" class="btn btn-primary">Add to cart</a>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
@@ -402,7 +407,7 @@ if(isset($_POST['add'])) {
                         <div class="card-body">
                             <h5 class="card-title">Quad</h5>
                             <p class="card-text">Product description and price</p>
-                            <a href="index_user.php" class="btn btn-primary">Add to cart</a>
+                            <a href="index.php" class="btn btn-primary">Add to cart</a>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">

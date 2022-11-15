@@ -21,12 +21,12 @@
     <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/logo2.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/logo2.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/logo2.svg">
     <link rel="manifest" href="assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="assets/icons/logo2.svg">
     <meta name="theme-color" content="#ffffff">
     <!-- Vendors styles-->
     <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
@@ -96,7 +96,7 @@
                             <div>
                                 <h2>Sign up</h2>
                                 <p>You have to create account to buy products.</p>
-                                <a href="register.html"><button class="btn btn-lg btn-outline-light mt-3" type="button">Register Now!</button></a>
+                                <a href="register.php"><button class="btn btn-lg btn-outline-light mt-3" type="button">Register Now!</button></a>
                             </div>
                         </div>
                     </div>
