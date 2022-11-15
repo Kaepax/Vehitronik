@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="logo2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.6290957"
+     inkscape:cx="96.372484"
+     inkscape:cy="203.79404"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid396" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#0000ff;stroke-width:0.264583"
+       id="rect222"
+       width="99.99337"
+       height="100.00175"
+       x="0.0017944068"
+       y="0" />
+    <g
+       id="g410">
+      <g
+         id="g419"
+         transform="translate(-1)">
+        <rect
+           style="fill:#ffffff;stroke-width:0.264583"
+           id="rect280-5-4"
+           width="12.34325"
+           height="81.530418"
+           x="66.994614"
+           y="11.693604" />
+        <rect
+           style="fill:#ffffff;stroke-width:0.264583"
+           id="rect280-5-4-2"
+           width="12.668073"
+           height="49.69783"
+           x="10.709285"
+           y="-98.205429"
+           transform="rotate(90)" />
+      </g>
+    </g>
+    <g
+       id="g406">
+      <g
+         id="g415"
+         transform="translate(-2)">
+        <rect
+           style="fill:#ffffff;stroke-width:0.264583"
+           id="rect280"
+           width="12.50566"
+           height="84.12899"
+           x="-1.9086822"
+           y="15.988535"
+           transform="rotate(-22.5)" />
+        <rect
+           style="fill:#ffffff;stroke-width:0.264583"
+           id="rect280-5"
+           width="12.50566"
+           height="84.12899"
+           x="65.777084"
+           y="-15.648048"
+           transform="rotate(22.5)" />
+        <rect
+           style="fill:#ffffff;stroke-width:0.264583"
+           id="rect280-5-4-2-8"
+           width="8.9355459"
+           height="9.56217"
+           x="84.293854"
+           y="-46.112461"
+           transform="rotate(90)"
+           ry="0" />
+      </g>
+    </g>
+  </g>
+</svg>
