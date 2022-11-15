@@ -301,11 +301,28 @@ if(isset($_POST['add'])) {
                         <li class="nav-item"><a class="nav-link" href="cart.php">
                                 <svg class="icon icon-lg">
                                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cart"></use>
-                                </svg></a></li>
+                                </svg>
+                                <?php
+                                if (isset($_SESSION['cart'])){
+                                    $count = count($_SESSION['cart']);
+                                    echo "<span id=\"cart_count\" class=\"text\">$count</span>";
+                                } else {
+                                    echo "<span id=\"cart_count\" class=\"text\">0</span>";
+                                }
+                                ?></a></li>
                     </ul>
                     <ul class="header-nav ms-3">
                         <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                <div class="avatar avatar-md"><h>User&nbsp;</h><img class="avatar-img" src="assets/img/avatars/10.jpg" alt="user@email.com"></div>
+                                <div class="avatar avatar-md">
+                                        <?php
+                                        if (isset($_SESSION['username'])){
+                                            $username = $_SESSION['username'];
+                                            echo "<span id=\"username\" class=\"text\">$username</span>";
+                                        } else {
+                                            echo "<span id=\"username\" class=\"text\">User</span>";
+                                        }
+                                        ?>
+                                    <img class="avatar-img" src="assets/img/avatars/10.jpg" alt="user@email.com"></div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end pt-0">
                                 <div class="dropdown-header bg-light py-2">
