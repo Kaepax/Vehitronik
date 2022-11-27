@@ -4,7 +4,7 @@ session_start();
 require_once ("php/CreateDb.php");
 require_once ("php/component.php");
 
-$db = new CreateDb("sql7567131", "producttb");
+$db = new CreateDb("sql7581230", "producttb");
 
 if (isset($_POST['remove'])) {
     if($_GET['action'] == 'remove') {
@@ -34,8 +34,10 @@ if (isset($_POST['remove'])) {
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>Cart</title>
-
     <!-- Vendors styles-->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/logo2.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/logo2.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/logo2.svg">
     <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
     <link rel="stylesheet" href="css/vendors/simplebar.css">
     <!-- Main styles for this application-->
@@ -51,14 +53,15 @@ require_once('php/header.php');
 ?>
 
 <div class="container-fluid">
+    <form action="php/payment-check.php"
+          method="post">
     <div class="row px-5">
         <div class="col-md-1"></div>
         <div class="col-md-5">
-            <div class="shopping-cart">
+            <div class="m-3 shopping-cart">
                 <h6>My Cart</h6>
                 <hr>
                 <?php
-
                 $total = 0;
                 if (isset($_SESSION['cart'])) {
                     $product_id=array_column($_SESSION['cart'], 'product_id');
@@ -74,8 +77,6 @@ require_once('php/header.php');
                 } else {
                     echo "<h5>Cart is empty.</h5>";
                 }
-
-
                 ?>
 
             </div>
@@ -104,11 +105,13 @@ require_once('php/header.php');
                         <hr>
                         <h6>$<?php echo $total; ?></h6>
                     </div>
+                    <div class="m-1"><button class="m-2 btn-primary btn float-end" type="submit">Purchase</button></div>
                 </div>
             </div>
         </div>
         <div class="col-md-1"></div>
     </div>
+    </form>
 </div>
 
 
