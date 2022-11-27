@@ -5,7 +5,7 @@ session_start();
 require_once('php/CreateDb.php');
 require_once('php/component.php');
 
-$database = new CreateDb("sql7567131", "producttb");
+$database = new CreateDb("sql7581230", "producttb");
 
 if(isset($_POST['add'])) {
 //    print_r($_POST['product_id']);

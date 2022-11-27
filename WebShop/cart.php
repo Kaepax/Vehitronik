@@ -4,7 +4,7 @@ session_start();
 require_once ("php/CreateDb.php");
 require_once ("php/component.php");
 
-$db = new CreateDb("sql7567131", "producttb");
+$db = new CreateDb("sql7581230", "producttb");
 
 if (isset($_POST['remove'])) {
     if($_GET['action'] == 'remove') {
@@ -106,6 +106,7 @@ require_once('php/header.php');
                         <hr>
                         <h6>$<?php echo $total; ?></h6>
                     </div>
+                    <div class="m-1"><button class="m-2 btn-primary btn float-end" type="submit" form="">Purchase</button></div>
                 </div>
             </div>
         </div>
