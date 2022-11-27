@@ -53,14 +53,15 @@ require_once('php/header.php');
 ?>
 
 <div class="container-fluid">
+    <form action="php/payment-check.php"
+          method="post">
     <div class="row px-5">
         <div class="col-md-1"></div>
         <div class="col-md-5">
-            <div class="shopping-cart">
+            <div class="m-3 shopping-cart">
                 <h6>My Cart</h6>
                 <hr>
                 <?php
-
                 $total = 0;
                 if (isset($_SESSION['cart'])) {
                     $product_id=array_column($_SESSION['cart'], 'product_id');
@@ -76,8 +77,6 @@ require_once('php/header.php');
                 } else {
                     echo "<h5>Cart is empty.</h5>";
                 }
-
-
                 ?>
 
             </div>
@@ -106,12 +105,13 @@ require_once('php/header.php');
                         <hr>
                         <h6>$<?php echo $total; ?></h6>
                     </div>
-                    <div class="m-1"><button class="m-2 btn-primary btn float-end" type="submit" form="">Purchase</button></div>
+                    <div class="m-1"><button class="m-2 btn-primary btn float-end" type="submit">Purchase</button></div>
                 </div>
             </div>
         </div>
         <div class="col-md-1"></div>
     </div>
+    </form>
 </div>
 
 

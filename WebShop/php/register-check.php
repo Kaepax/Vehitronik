@@ -11,7 +11,15 @@ if(isset($_REQUEST['username'])){
     $name = stripslashes($_REQUEST['name']);
     $name= mysqli_real_escape_string($con,$name);
 
-    $sql = "INSERT INTO users (role, username, password, name) VALUES ('user', '$username','".md5($password)."','$name')";
+    $key = "aswkjfrh23ubnakfahiwof";
+    $plaintext = $password;
+    $ivlen = openssl_cipher_iv_length($cipher="AES-128-CBC");
+//    $iv = openssl_random_pseudo_bytes($ivlen);
+    $ciphertext_raw = openssl_encrypt($plaintext, $cipher, $key, $options=OPENSSL_RAW_DATA);
+    $hmac = hash_hmac('sha256', $ciphertext_raw, $key, $as_binary=true);
+    $ciphertext = base64_encode( $hmac.$ciphertext_raw );
+
+    $sql = "INSERT INTO users (role, username, password, name) VALUES ('user', '$username','$ciphertext','$name')";
     $result = mysqli_query($con, $sql);
 
     if($result){
@@ -19,4 +27,7 @@ if(isset($_REQUEST['username'])){
     }else{
         echo "<script>alert('Cannot create account!')</script>";
     }
+}else{
+    header("Location: ../register.php");
 }
+
