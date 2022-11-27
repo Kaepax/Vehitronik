@@ -1,10 +1,10 @@
 <?php
 
 $servername="sql7.freesqldatabase.com";
-$username="sql7567131";
-$password="QWfMzWQq53";
+$username="sql7581230";
+$password="MQMSwHyUxe";
 
-$dbname="sql7567131";
+$dbname="sql7581230";
 $tablename="users";
 
 $con = mysqli_connect($servername, $username, $password, $dbname);
