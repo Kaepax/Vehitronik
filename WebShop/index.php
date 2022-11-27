@@ -179,7 +179,7 @@ if(isset($_POST['add'])) {
             </nav>
         </div>
     </header>
-    <?php require_once("php/header.php") ?>
+<!--    --><?php //require_once("php/header.php") ?>
     <div class="body flex-grow-1 px-3">
         <div class="container-lg">
             <div class="row">
@@ -190,71 +190,7 @@ if(isset($_POST['add'])) {
                         component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
                     }
                     ?>
-                    <!--                    <img src="assets/scr/maluch.jpg" class="card-img-top" width="100" height="200" alt="...">-->
-                    <!--                    <div class="card-body">-->
-                    <!--                        <h5 class="card-title">Fiat</h5>-->
-                    <!--                        <p class="card-text">Product description and price</p>-->
-                    <!--                        <a href="#" class="btn btn-primary">Manage product</a>-->
-                    <!--                    </div>-->
                 </div>
-                <!--                <div class="card" style="width: 18rem;">-->
-                <!--                    <img src="assets/scr/skuter_wodny.jpeg" class="card-img-top" width="100" height="200" alt="...">-->
-                <!--                    <div class="card-body">-->
-                <!--                        <h5 class="card-title">Skuter wodny</h5>-->
-                <!--                        <p class="card-text">Product description and price</p>-->
-                <!--                        <a href="#" class="btn btn-primary">Manage product</a>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="card" style="width: 18rem;">-->
-                <!--                    <img src="assets/scr/jaht.webp" class="card-img-top" width="100" height="200" alt="...">-->
-                <!--                    <div class="card-body">-->
-                <!--                        <h5 class="card-title">Jacht</h5>-->
-                <!--                        <p class="card-text">Product description and price</p>-->
-                <!--                        <a href="#" class="btn btn-primary">Manage product</a>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="card" style="width: 18rem;">-->
-                <!--                    <img src="assets/scr/porsche.jpg" class="card-img-top" width="100" height="200" alt="...">-->
-                <!--                    <div class="card-body">-->
-                <!--                        <h5 class="card-title">Porsche</h5>-->
-                <!--                        <p class="card-text">Product description and price</p>-->
-                <!--                        <a href="#" class="btn btn-primary">Manage product</a>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--            </div>-->
-                <!--            <div class="row">-->
-                <!--                <div class="card" style="width: 18rem;">-->
-                <!--                    <img src="assets/scr/hulajnoga.png" class="card-img-top" width="100" height="200" alt="...">-->
-                <!--                    <div class="card-body">-->
-                <!--                        <h5 class="card-title">Hulajnoga</h5>-->
-                <!--                        <p class="card-text">Product description and price</p>-->
-                <!--                        <a href="#" class="btn btn-primary">Manage product</a>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="card" style="width: 18rem;">-->
-                <!--                    <img src="assets/scr/skuter.jpg" class="card-img-top" width="100" height="200" alt="...">-->
-                <!--                    <div class="card-body">-->
-                <!--                        <h5 class="card-title">Skuter</h5>-->
-                <!--                        <p class="card-text">Product description and price</p>-->
-                <!--                        <a href="#" class="btn btn-primary">Manage product</a>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="card" style="width: 18rem;">-->
-                <!--                    <img src="assets/scr/quad.jpg" class="card-img-top" width="100" height="200" alt="...">-->
-                <!--                    <div class="card-body">-->
-                <!--                        <h5 class="card-title">Quad</h5>-->
-                <!--                        <p class="card-text">Product description and price</p>-->
-                <!--                        <a href="#" class="btn btn-primary">Manage product</a>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <!--                <div class="card" style="width: 18rem;">-->
-                <!--                    <img src="assets/scr/rower.jpg" class="card-img-top" width="100" height="200" alt="...">-->
-                <!--                    <div class="card-body">-->
-                <!--                        <h5 class="card-title">Rower górski</h5>-->
-                <!--                        <p class="card-text">Product description and price</p>-->
-                <!--                        <a href="#" class="btn btn-primary">Manage product</a>-->
-                <!--                    </div>-->
-                <!--                </div>-->
             </div>
         </div>
     </div>
