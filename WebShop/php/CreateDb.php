@@ -10,11 +10,11 @@ class CreateDb
     public $con;
 
     public function __construct(
-        $dbname="sql7567131",
+        $dbname="sql7581230",
         $tablename="producttb",
         $servername="sql7.freesqldatabase.com",
-        $username="sql7567131",
-        $password="QWfMzWQq53"
+        $username="sql7581230",
+        $password="MQMSwHyUxe"
     )
     {
         $this->dbname=$dbname;
